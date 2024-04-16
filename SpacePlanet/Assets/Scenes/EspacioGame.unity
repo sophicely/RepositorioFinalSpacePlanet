@@ -136,7 +136,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108852228}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.3011022, y: 0.31320262, z: 1.8554918}
@@ -148,13 +148,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108852228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7af57de618a4b044b97a1a6369dcbd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   upwardForce: 10
   movementDuration: 1
+--- !u!54 &108852233
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108852228}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &246604160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbe807892d4f9e843a7a9d6bd7b72c3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbe807892d4f9e843a7a9d6bd7b72c3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -463,6 +479,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 267dd010436240c47a377864c159cee4, type: 3}
+--- !u!1 &1600543556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3435279276100194387, guid: bbe807892d4f9e843a7a9d6bd7b72c3c, type: 3}
+  m_PrefabInstance: {fileID: 246604160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1600543558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600543556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.38, y: 0.43, z: 0.46}
+  m_Center: {x: 0, y: 0, z: 0.42}
 --- !u!1 &1667647948
 GameObject:
   m_ObjectHideFlags: 0
