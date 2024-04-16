@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class UpwardMovement : MonoBehaviour
 {
-    public float upwardForce = 5f; 
-    public float movementDuration = 1f; 
+    public float upwardForce = 5f;
+    public float movementDuration = 1f;
 
-    private bool playerTouching = false; 
+    public bool playerTouching = false; 
+    public bool movimiento = false;
 
     void Update()
     {
-       
-        if (playerTouching && Input.GetKeyDown(KeyCode.Space))
+        if (playerTouching && !movimiento)
         {
+            movimiento = true;
             StartCoroutine(MoveUpward());
         }
     }
@@ -24,21 +25,14 @@ public class UpwardMovement : MonoBehaviour
         Vector3 initialPosition = transform.position;
         Vector3 targetPosition = transform.position + Vector3.up * upwardForce;
 
-        
         while (timer < movementDuration)
         {
-            
             timer += Time.deltaTime;
-
-           
             transform.position = Vector3.Lerp(initialPosition, targetPosition, timer / movementDuration);
-
-            
             yield return null;
         }
     }
 
-    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -47,7 +41,6 @@ public class UpwardMovement : MonoBehaviour
         }
     }
 
-    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
